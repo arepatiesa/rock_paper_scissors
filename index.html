@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors!</title>
+</head>
+<body>
+    <script>
+        
+        let playerScore = 0;
+        let computerScore = 0;
+
+        function computerPlay(){
+
+            let randomNumber = Math.floor(Math.random() * (4 - 1) + 1); //generamos un numero aleatorio y lo asignamos a una variable
+
+            switch(randomNumber) { //creamos diversos casos que dependiendo de 3 casos da 3 resulstados diferentes
+
+                case 1: return "rock";
+                break;
+
+                case 2: return  "paper";
+                break;
+
+                case 3: return  "scissors";
+                break;
+
+            }
+
+        }
+
+
+        function playAround(playerSelection, computerSelection)
+    {
+            
+         if((playerSelection.toLowerCase() == "paper" && computerSelection == "rock") || (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors") || (playerSelection.toLowerCase() == "scissors" && computerSelection == "paper"))
+        {     
+            playerScore = playerScore + 1;    
+            return `You win! ${playerSelection.toLowerCase()} beats ${computerSelection}`;  
+        }
+
+        else if((playerSelection.toLowerCase() == "rock" && computerSelection == "paper") || (playerSelection.toLowerCase() == "scissors" && computerSelection == "rock") || (playerSelection.toLowerCase() == "paper" && computerSelection == "scissors"))
+        {      
+            computerScore = computerScore + 1;    
+            return `You lose! ${computerSelection} beats ${playerSelection.toLowerCase()}`;      
+        }
+
+        else if(playerSelection.toLowerCase() == computerSelection)
+        {
+
+            return "It's a tie";
+        }
+
+    }
+
+        function game()
+    {
+
+
+        do {
+                        
+            const playerSelection = prompt("Welcome to Rock, Paper, Scissors! \n Write down one of those three so you can challnge the computer!!");
+            const computerSelection = computerPlay();
+            console.log(playAround(playerSelection, computerSelection));
+
+        }while(playerScore !== 3 && computerScore !== 3);
+
+        if(computerScore == 3){
+            console.log("You lost against the computer.");
+        }
+        else if (playerScore == 3){
+            console.log("Congratulations, you've beaten the computer!!");
+        }
+        
+    }
+
+    </script>
+</body>
+</html>
