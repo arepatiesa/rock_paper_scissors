@@ -38,13 +38,13 @@
          if((playerSelection.toLowerCase() == "paper" && computerSelection == "rock") || (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors") || (playerSelection.toLowerCase() == "scissors" && computerSelection == "paper"))
         {     
             playerScore = playerScore + 1;    
-            return `You win! ${playerSelection.toLowerCase()} beats ${computerSelection}`;  
+            return `You win! ${playerSelection.toLowerCase()} beats ${computerSelection} // P: ${playerScore} C: ${computerScore}`;  
         }
 
         else if((playerSelection.toLowerCase() == "rock" && computerSelection == "paper") || (playerSelection.toLowerCase() == "scissors" && computerSelection == "rock") || (playerSelection.toLowerCase() == "paper" && computerSelection == "scissors"))
         {      
             computerScore = computerScore + 1;    
-            return `You lose! ${computerSelection} beats ${playerSelection.toLowerCase()}`;      
+            return `You lose! ${computerSelection} beats ${playerSelection.toLowerCase()} // P: ${playerScore} C: ${computerScore}`;      
         }
 
         else if(playerSelection.toLowerCase() == computerSelection)
@@ -61,16 +61,16 @@
 
         do {
                         
-            const playerSelection = prompt("Welcome to Rock, Paper, Scissors! \n Write down one of those three so you can challenge the computer!!");
+            const playerSelection = prompt("Welcome to Rock, Paper, Scissors! \n \n Write down one of those three so you can challenge the computer!! \n \n You win if you get 5 points. Good Luck!");
             const computerSelection = computerPlay();
             console.log(playAround(playerSelection, computerSelection));
 
-        }while(playerScore !== 3 && computerScore !== 3);
+        }while(playerScore !== 5 && computerScore !== 5);
 
-        if(computerScore == 3){
+        if(computerScore == 5){
             console.log("You lost against the computer.");
         }
-        else if (playerScore == 3){
+        else if (playerScore == 5){
             console.log("Congratulations, you've beaten the computer!!");
         }
         
