@@ -1,0 +1,224 @@
+html, body{
+    background: url("images/dojo-room.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0px;
+    min-height: 65vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button{
+    background-color: rgb(145, 82, 5);
+    border: solid rgb(81, 45, 3) 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#banner{
+height: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: rgb(145, 82, 5);
+border: solid rgb(81, 45, 3) 10px;
+border-right: none;
+border-left: none;
+margin-top: -20px;
+margin-bottom: -15px;
+}
+
+#banner-text{
+    font-size: 30px;
+    color: white;
+}
+
+kbd{
+    color:rgb(255, 77, 0);
+}
+
+b{
+    color: rgb(200, 200, 254);
+}
+
+i{
+    color: rgba(37, 170, 252, 0.879);
+}
+strong{
+    color: rgb(50, 50, 50);
+}
+
+
+#enemy-ui{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    transform: scale(0.7);
+    margin: -30px 0px 0px 0px;
+}
+
+#enemy{
+    width: 80px;
+    color: rgb(50, 50, 50);
+    margin: -10px;
+}
+
+.enemy-icons{
+    width: 50px;
+    color: rgb(145, 82, 5);
+}
+
+.cards-enemy{
+    padding: 20px;
+    background-color: rgb(81, 45, 3) ;
+    border: solid rgb(145, 82, 5) 10px;
+}
+
+#enemy-health-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(145, 82, 5);
+    padding: 4px;
+    width:210px;
+    border: solid rgb(50, 50, 50) 5px;
+}
+
+#enemy-holder{
+    width: 113px;
+    height: 10px;
+    background-color: rgb(50, 50, 50);
+    display: flex;
+    gap: 3px;
+    padding: 3px;
+    margin: 0px;
+}
+
+#enemy-porcentage{
+    color: rgb(50, 50, 50);
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    margin: 0px;
+    padding-left: 5px;
+    cursor: default;
+}
+
+.eFire{
+    color:rgb(255, 77, 0);
+}
+
+.eWater{
+    color: rgba(37, 170, 252, 0.879);
+}
+
+.eSnow{
+    color: rgb(200, 200, 254);
+}
+
+
+
+#player-ui{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    transform: scale(0.7);
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+#player-name{
+    color: white;
+    margin: -18px;
+    font-size: 25px;
+    cursor: default;
+}
+
+#player{
+    width: 80px;
+    color: white;
+}
+
+ .player-icons{
+    width: 50px;
+    color: white;
+}
+
+#elements{
+    display: flex;
+    gap: 10px;
+}
+
+.cards-player{
+    padding: 20px;
+    background-color: rgb(145, 82, 5);
+    border: solid rgb(81, 45, 3) 10px;
+    cursor: pointer;
+
+}
+
+.cards-player:hover{
+    border: solid white 10px;
+}
+
+.cards-player:hover #pFire{
+    color:rgb(255, 77, 0);
+}
+
+.cards-player:hover #pWater{
+    color: rgba(37, 170, 252, 0.879);
+}
+
+.cards-player:hover #pSnow{
+    color: rgb(200, 200, 254);
+}
+
+.pFire{
+    color:rgb(255, 77, 0);
+}
+
+.pWater{
+    color: rgba(37, 170, 252, 0.879);
+}
+
+.pSnow{
+    color: rgb(200, 200, 254);
+}
+
+#player-health-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(145, 82, 5);
+    padding: 4px;
+    width:210px;
+    border: solid rgb(255, 255, 255) 5px;
+}
+#holder{
+    width: 113px;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    gap: 3px;
+    padding: 3px;
+    margin: 0px;
+}
+.bar{
+    width: 20px;
+    height: 10px;
+    background-color: rgb(249, 89, 64);
+}
+#porcentage{
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0px;
+    padding-left: 5px;
+    cursor: default;
+}
+
+
